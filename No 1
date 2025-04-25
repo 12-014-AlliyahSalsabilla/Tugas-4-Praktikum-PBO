@@ -1,0 +1,33 @@
+# Nama : Alliyah Salsabilla
+# NIM : 123140014
+
+import math  # Mengimpor modul math untuk menggunakan fungsi matematika seperti sqrt
+
+def hitung_akar_kuadrat():
+    try:
+        # Meminta input angka dari pengguna
+        angka_input = input("Masukkan angka: ")
+
+        # Mengonversi input ke float
+        angka = float(angka_input)
+
+        # Mengecek apakah angka nol atau negatif
+        if angka == 0:
+            print("Akar kuadrat dari nol tidak diperbolehkan.")
+        elif angka < 0:
+            print("Input tidak valid. Harap masukkan angka positif.")
+        else:
+            # Menghitung akar kuadrat dan menampilkannya
+            akar = math.sqrt(angka)
+            print(f"Akar kuadrat dari {angka} adalah {akar:.2f}")
+    
+    # Menangani error jika input bukan angka
+    except ValueError:
+        print("Input tidak valid. Harap masukkan angka yang valid.")
+    
+    # Menangani error lain yang tidak terduga
+    except Exception as e:
+        print(f"Terjadi kesalahan yang tidak terduga: {e}")
+
+# Menjalankan fungsi
+hitung_akar_kuadrat()
